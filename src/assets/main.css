@@ -1,0 +1,11 @@
+:root {
+  --bs-body-bg: var(--bs-dark);
+  --ba-link-active: #8c4eff;
+  --ba-link-hover: #8c4eff;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
