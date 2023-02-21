@@ -1,8 +1,10 @@
 <template>
   <div class="container d-flex justify-content-center align-items-center">
     <div class="content">
-      <h1>Seite nicht gefunden</h1>
-      <h2>Die gewünschte Seite wurde leider nicht gefunden!</h2>
+      <slot>
+        <h1>Seite nicht gefunden</h1>
+        <h2>Die gewünschte Seite wurde leider nicht gefunden!</h2>
+      </slot>
     </div>
   </div>
 </template>

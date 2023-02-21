@@ -63,7 +63,10 @@ router.beforeEach(async (to, from) => {
     });
     isAuth = response.data.authenticated;
   } catch (error) {
-    console.log("Login issue!");
+    if (error.request) {
+      console.log("Login issue!");
+      return false;
+    }
   }
 
   if (to.meta.requiresAuth && !isAuth && to.name !== "login") {
