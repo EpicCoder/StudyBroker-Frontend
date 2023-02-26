@@ -11,19 +11,10 @@ import ModalInfo from "../components/ModalInfo.vue";
     <div class="row gap-5 mb-5 gx-0">
       <div class="col">
         <div class="input-group mb-3">
-          <input
-            @keydown.enter="searchStock()"
-            type="text"
-            v-model="searchValue"
-            class="form-control rounded-0"
-            placeholder="US-Wertpapier Symbol: AAPL, TSLA, MSFT..."
-          />
+          <input @keydown.enter="searchStock()" type="text" v-model="searchValue" class="form-control rounded-0"
+            placeholder="US-Wertpapier Symbol: AAPL, TSLA, MSFT..." />
           <div class="input-group-append">
-            <button
-              class="btn btn-primary rounded-0"
-              type="button"
-              @click="searchStock()"
-            >
+            <button class="btn btn-primary rounded-0" type="button" @click="searchStock()">
               Suchen
             </button>
           </div>
@@ -53,10 +44,7 @@ import ModalInfo from "../components/ModalInfo.vue";
             </tr>
           </tbody>
         </table>
-        <button
-          class="btn btn-success rounded-0 me-3 w-100"
-          @click="buyStock(result.name)"
-        >
+        <button class="btn btn-success rounded-0 me-3 w-100" @click="buyStock(result.name)">
           Kaufen
         </button>
       </div>
@@ -65,7 +53,8 @@ import ModalInfo from "../components/ModalInfo.vue";
       </div>
     </div>
     <div v-if="error" class="alert alert-warning text-center rounded-0">
-      Keine Ergebnisse, für das Gesuchte Wertpapier!
+      Kein Ergebnis für das gesuchte Wertpapier! Möglicherweise liegt Ihre Anfrage außerhalb der Handelszeiten
+      (Mo.–Fr.).
     </div>
   </div>
 </template>
